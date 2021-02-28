@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20210228 19:28:30.233" rpa="false">
+<suite id="s1" name="Topnews" source="E:\Sstt\Kompas\src\main\topnews.robot">
+<test id="s1-t1" name="Get Return 200">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>Get Top News</arg>
+<arg>${base_url}</arg>
+<arg>verify=true</arg>
+</arguments>
+<msg timestamp="20210228 19:28:30.613" level="INFO">Creating Session using : alias=Get Top News, url=https://rss.kompas.id/list, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20210228 19:28:30.611" endtime="20210228 19:28:30.613"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>Get Top News</arg>
+<arg>uri=${endpoint}</arg>
+</arguments>
+<assign>
+<var>${results}</var>
+</assign>
+<msg timestamp="20210228 19:28:31.171" level="INFO">GET Request : url=https://rss.kompas.id/list/top_news 
+ path_url=/list/top_news 
+ headers={'User-Agent': 'python-requests/2.18.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20210228 19:28:31.171" level="INFO">GET Response : url=https://rss.kompas.id/list/top_news 
+ status=200, reason=OK 
+ body=&lt;rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:nyt="http://www.nytimes.com/namespaces/rss/2.0" version="2.0"&gt;
+    &lt;channel&gt;
+    &lt;title&gt;&lt;![CDATA[ Kompas.id  - Top News]]&gt;&lt;/title&gt;
+    &lt;link&gt;www.kompas.id&lt;/link&gt;
+    &lt;atom:link href="https://rss.kompas.id/list/top_news" rel="self" type="application/rss+xml"/&gt;
+    &lt;language&gt;ID&lt;/language&gt;
+    &lt;copyright&gt;Copyright 2020 Kompas&lt;/copyright&gt;
+    &lt;lastBuildDate&gt;2021-02-28T07:33:56+0000&lt;/lastBuildDate&gt;
+    &lt;pubDate&gt;2021-02-28T07:33:56+0000&lt;/pubDate&gt;
+        &lt;item&gt;
+        &lt;title&gt;Nikel Indonesia, Jantung Baterai Kendaraan Listrik Dunia&lt;/title&gt;
+        &lt;link&gt;https://www.kompas.id/baca/premium_promo/2021/02/26/nikel-indonesia-jantung-baterai-kendaraan-listrik-dunia&lt;/link&gt;
+        &lt;guid isPermalink="true"&gt;https://www.kompas.id/baca/premium_promo/2021/02/26/nikel-indonesia-jantung-baterai-kendaraan-listrik-dunia&lt;/guid&gt;
+        &lt;description&gt;&lt;![CDATA[&amp;lt;p&amp;gt;Dunia masa depan akan mengalami banyak perubahan dalam pemanfaatan energi, salah satunya pemanfaatan nikel sebagai salah satu komponen vital sumber energi baterai kendaraan listrik.&amp;lt;/p&amp;gt;
+]]&gt;&lt;/description&gt;
+        &lt;dc:creator&gt;Kompas&lt;/dc:creator&gt;
+        &lt;pubDate&gt;2021-02-26T08:10:46+0000&lt;/pubDate&gt;
+        &lt;media:content medium="image" url="https://d2huqozv2aqnkj.cloudfront.net/wp-content/uploads/2021/02/20210225-COVER-nikel-baterai_1614251399.jpg" /&gt;
+        &lt;media:credit&gt;Kompas&lt;/media:credit&gt;
+    &lt;/item&gt;
+        &lt;item&gt;
+        &lt;title&gt;Saat KPK Membuat Geger Warga Sulsel&lt;/title&gt;
+        &lt;link&gt;https://www.kompas.id/baca/nusantara/2021/02/27/saat-kpk-membuat-geger-warga-sulsel&lt;/link&gt;
+        &lt;guid isPermalink="true"&gt;https://www.kompas.id/baca/nusantara/2021/02/27/saat-kpk-membuat-geger-warga-sulsel&lt;/guid&gt;
+        &lt;description&gt;&lt;![CDATA[Penangkapan Nurdin Abdullah membuat geger warga Makssar dan Sulsel umumnya. Hingga siang ini, pertanyaan seputar kebenaran penangkapan ini dan kasus apa yang menjeratnya masih ramai jadi perbincangan.]]&gt;&lt;/description&gt;
+        &lt;dc:creator&gt;RENY SRI AYU&lt;/dc:creator&gt;
+        &lt;pubDate&gt;2021-02-27T10:26:47+0000&lt;/pubDate&gt;
+        &lt;media:content medium="image" url="https://d2huqozv2aqnkj.cloudfront.net/wp-content/uploads/2020/03/3F93DE08-5AE7-42B7-847E-8EF8A816F23A_1584584628.jpeg" /&gt;
+        &lt;media:credit&gt;KOMPAS/RENY SRI AYU&lt;/media:credit&gt;
+    &lt;/item&gt;
+        &lt;item&gt;
+        &lt;title&gt;Mi Instan, Tetap di Hati meskipun Pandemi&lt;/title&gt;
+        &lt;link&gt;https://www.kompas.id/baca/metro/2021/02/28/mi-instan-tetap-di-hati-meskipun-pandemi&lt;/link&gt;
+        &lt;guid isPermalink="true"&gt;https://www.kompas.id/baca/metro/2021/02/28/mi-instan-tetap-di-hati-meskipun-pandemi&lt;/guid&gt;
+        &lt;description&gt;&lt;![CDATA[Mirip seperti saat pertama diciptakan untuk mengatasi kelaparan setelah Perang Dunia II di Jepang, sekarang mi instan Nusantara menjadi bahan makanan cadangan saat pembatasan sosial di dalam dan luar negeri.]]&gt;&lt;/description&gt;
+        &lt;dc:creator&gt;M. Puteri Rosalina (Litbang Kompas)&lt;/dc:creator&gt;
+        &lt;pubDate&gt;2021-02-28T08:33:39+0000&lt;/pubDate&gt;
+        &lt;media:content medium="image" url="https://d2huqozv2aqnkj.cloudfront.net/wp-content/uploads/2021/01/e7d9fe11-214e-48fa-a93a-dbd9758d813f_jpg.jpg" /&gt;
+        &lt;media:credit&gt;KOMPAS/TOTOK WIJAYANTO &lt;/media:credit&gt;
+    &lt;/item&gt;
+        &lt;item&gt;
+        &lt;title&gt;Kegigihan Ahmad Fahrizal Menjadi Petani Bibit Avokad di Jakarta&lt;/title&gt;
+        &lt;link&gt;https://www.kompas.id/baca/metro/2021/02/27/kegigihan-ahmad-fahrizal-menjadi-petani-bibit-avokad-di-jakarta&lt;/link&gt;
+        &lt;guid isPermalink="true"&gt;https://www.kompas.id/baca/metro/2021/02/27/kegigihan-ahmad-fahrizal-menjadi-petani-bibit-avokad-di-jakarta&lt;/guid&gt;
+        &lt;description&gt;&lt;![CDATA[Menanam dan menyebarluaskan bibit avokad cipedak bagi Ahmad Fahrizal merupakan perbuatan nyata melestarikan kekayaan hayati asal Jakarta, tanah kelahirannya. ]]&gt;&lt;/description&gt;
+        &lt;dc:creator&gt;JOHANES GALUH BIMANTARA&lt;/dc:creator&gt;
+        &lt;pubDate&gt;2021-02-27T06:27:48+0000&lt;/pubDate&gt;
+        &lt;media:content medium="image" url="https://d2huqozv2aqnkj.cloudfront.net/wp-content/uploads/2021/02/9fcf0457-91c8-45cf-9a99-ee48e10df327_jpg.jpg" /&gt;
+        &lt;media:credit&gt;KOMPAS/JOHANES GALUH BIMANTARA&lt;/media:credit&gt;
+    &lt;/item&gt;
+        &lt;item&gt;
+        &lt;title&gt;Peristiwa Penembakan Tidak Menggoyahkan Sinergi TNI-Polri&lt;/title&gt;
+        &lt;link&gt;https://www.kompas.id/baca/metro/2021/02/27/peristiwa-penembakan-tidak-menggoyahkan-sinergi-tni-polri&lt;/link&gt;
+        &lt;guid isPermalink="true"&gt;https://www.kompas.id/baca/metro/2021/02/27/peristiwa-penembakan-tidak-menggoyahkan-sinergi-tni-polri&lt;/guid&gt;
+        &lt;description&gt;&lt;![CDATA[Lepas dari berbagai dinamika yang terjadi di lapangan, sinergi TNI-Polri bersama segenap komponen bangsa lainnya sangat diperlukan dalam upaya menekan pandemi dan pemulihan ekonomi nasional.]]&gt;&lt;/description&gt;
+        &lt;dc:creator&gt;I Gusti Agung Bagus Angga Putra dan Edna C Pattisina&lt;/dc:creator&gt;
+        &lt;pubDate&gt;2021-02-27T08:28:29+0000&lt;/pubDate&gt;
+        &lt;media:content medium="image" url="https://d2huqozv2aqnkj.cloudfront.net/wp-content/uploads/2021/01/kapolri-panglima3_1612084359.jpeg" /&gt;
+        &lt;media:credit&gt;Kompas&lt;/media:credit&gt;
+    &lt;/item&gt;
+        &lt;item&gt;
+        &lt;title&gt;Ada Pemodal di Balik Tambang Emas Ilegal&lt;/title&gt;
+        &lt;link&gt;https://www.kompas.id/baca/nusantara/2021/02/28/ada-pemodal-dibalik-tambang-emas-ilegal&lt;/link&gt;
+        &lt;guid isPermalink="true"&gt;https://www.kompas.id/baca/nusantara/2021/02/28/ada-pemodal-dibalik-tambang-emas-ilegal&lt;/guid&gt;
+        &lt;description&gt;&lt;![CDATA[Pertambangan emas ilegal di Parigi Moutong, Sulawesi Tengah, berada di pegunungan dengan lubang tambang tersebar di kebun warga dan hutan. Ada alat berat dioperasikan di sana.]]&gt;&lt;/description&gt;
+        &lt;dc:creator&gt;Videlis Jemali dan Irma Tambunan&lt;/dc:creator&gt;
+        &lt;pubDate&gt;2021-02-28T08:27:28+0000&lt;/pubDate&gt;
+        &lt;media:content medium="image" url="https://d2huqozv2aqnkj.cloudfront.net/wp-content/uploads/2021/02/909a9695-7f0b-4041-9649-1d99ab44eff8_jpg-e1614250236175.jpg" /&gt;
+        &lt;media:credit&gt;DOKUMENTASI BASARNAS PALU&lt;/media:credit&gt;
+    &lt;/item&gt;
+        &lt;item&gt;
+        &lt;title&gt;Api Lahan Gambut Hanguskan Dua Ruang Kelas SMKN 01 Sungai Raya&lt;/title&gt;
+        &lt;link&gt;https://www.kompas.id/baca/nusantara/2021/02/27/api-lahan-gambut-hanguskan-dua-ruang-kelas-smkn-01-sungai-raya&lt;/link&gt;
+        &lt;guid isPermalink="true"&gt;https://www.kompas.id/baca/nusantara/2021/02/27/api-lahan-gambut-hanguskan-dua-ruang-kelas-smkn-01-sungai-raya&lt;/guid&gt;
+        &lt;description&gt;&lt;![CDATA[Api dari kebakaran lahan gambut di Kecamatan Sungai Raya, Kabupaten Kubu Raya, Kalimantan Barat, menjalar ke bangunan SMKN 01 Sungai Raya, Sabtu (27/2/2021). Akibatnya, kedua ruangan itu hangus terbakar.  ]]&gt;&lt;/description&gt;
+        &lt;dc:creator&gt;EMANUEL EDI SAPUTRA&lt;/dc:creator&gt;
+        &lt;pubDate&gt;2021-02-27T20:14:59+0000&lt;/pubDate&gt;
+        &lt;media:content medium="image" url="https://d2huqozv2aqnkj.cloudfront.net/wp-content/uploads/2021/02/IMG_0378_1614426735.jpg" /&gt;
+        &lt;media:credit&gt;KOMPAS/EMANUEL EDI SAPUTRA&lt;/media:credit&gt;
+    &lt;/item&gt;
+        &lt;item&gt;
+        &lt;title&gt;Pelacakan Belum Maksimal, Kasus Baru Covid-19 Akan Terus Bertambah&lt;/title&gt;
+        &lt;link&gt;https://www.kompas.id/baca/metro/2021/02/27/pelacakan-belum-maksimal-kasus-baru-covid-19-akan-terus-bertambah&lt;/link&gt;
+        &lt;guid isPermalink="true"&gt;https://www.kompas.id/baca/metro/2021/02/27/pelacakan-belum-maksimal-kasus-baru-covid-19-akan-terus-bertambah&lt;/guid&gt;
+        &lt;description&gt;&lt;![CDATA[Pelacakan berbasis masyarakat melalui RT/RW juga program Kampung Tangguh Jaya adalah kunci keefektifan pelacakan karena mereka yang mengetahui nama serta alamat orang yang dicari. Sayangnya, program ini belum meluas.]]&gt;&lt;/description&gt;
+        &lt;dc:creator&gt;Laraswati Ariadne Anwar&lt;/dc:creator&gt;
+        &lt;pubDate&gt;2021-02-27T09:54:43+0000&lt;/pubDate&gt;
+        &lt;media:content medium="image" url="https://d2huqozv2aqnkj.cloudfront.net/wp-content/uploads/2021/02/662d5eb2-7376-4dea-90a5-bd1e724b373c_jpg.jpg" /&gt;
+        &lt;media:credit&gt;Kompas/Priyombodo &lt;/media:credit&gt;
+    &lt;/item&gt;
+        &lt;item&gt;
+        &lt;title&gt;BUMDes Au Wula Sukses Berinovasi di Tengah Pandemi&lt;/title&gt;
+        &lt;link&gt;https://www.kompas.id/baca/ekonomi/2021/02/28/bumdes-au-wula-desa-detusoko-barat-ende-sukses-berinovasi-di-tengah-pandemi-covid-19-feature&lt;/link&gt;
+        &lt;guid isPermalink="true"&gt;https://www.kompas.id/baca/ekonomi/2021/02/28/bumdes-au-wula-desa-detusoko-barat-ende-sukses-berinovasi-di-tengah-pandemi-covid-19-feature&lt;/guid&gt;
+        &lt;description&gt;&lt;![CDATA[BUMDes Au Wula menampung hasil pertanian dari warga yang selama ini sulit dipasarkan. BUMDes ini juga memelopori pariwisata lokal menawarkan ”home stay” hingga pemandangan Danau Kelimutu.]]&gt;&lt;/description&gt;
+        &lt;dc:creator&gt;KORNELIS KEWA AMA&lt;/dc:creator&gt;
+        &lt;pubDate&gt;2021-02-28T10:05:03+0000&lt;/pubDate&gt;
+        &lt;media:content medium="image" url="https://d2huqozv2aqnkj.cloudfront.net/wp-content/uploads/2021/02/64863cb0-f638-4fb4-82f9-909f340d646d_jpg.jpg" /&gt;
+        &lt;media:credit&gt;KOMPAS/KORNELIS KEWA AMA&lt;/media:credit&gt;
+    &lt;/item&gt;
+        &lt;item&gt;
+        &lt;title&gt;Hanyutnya Hunian Kami&lt;/title&gt;
+        &lt;link&gt;https://www.kompas.id/baca/metro/2021/02/28/hanyutnya-hunian-kami&lt;/link&gt;
+        &lt;guid isPermalink="true"&gt;https://www.kompas.id/baca/metro/2021/02/28/hanyutnya-hunian-kami&lt;/guid&gt;
+        &lt;description&gt;&lt;![CDATA[”Tak ada yang tersisa, hanya baju yang menempel, rumah rata tak tersisa,” ujar perempuan paruh baya tersebut sembari kembali mencuci dan menjemur pakaian.]]&gt;&lt;/description&gt;
+        &lt;dc:creator&gt;AGUS SUSANTO&lt;/dc:creator&gt;
+        &lt;pubDate&gt;2021-02-28T07:33:56+0000&lt;/pubDate&gt;
+        &lt;media:content medium="image" url="https://d2huqozv2aqnkj.cloudfront.net/wp-content/uploads/2021/02/6061b0f0-6068-40b8-8def-1fbcc3d8d244_jpg.jpg" /&gt;
+        &lt;media:credit&gt;KOMPAS/AGUS SUSANTO &lt;/media:credit&gt;
+    &lt;/item&gt;
+        &lt;/channel&gt;
+&lt;/rss&gt; 
+ </msg>
+<msg timestamp="20210228 19:28:31.171" level="INFO">${results} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210228 19:28:30.614" endtime="20210228 19:28:31.171"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${results.status_code}</arg>
+</arguments>
+<assign>
+<var>${string_results}</var>
+</assign>
+<msg timestamp="20210228 19:28:31.173" level="INFO">${string_results} = 200</msg>
+<status status="PASS" starttime="20210228 19:28:31.172" endtime="20210228 19:28:31.173"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${string_results}</arg>
+<arg>201</arg>
+</arguments>
+<msg timestamp="20210228 19:28:31.174" level="FAIL">200 != 201</msg>
+<status status="FAIL" starttime="20210228 19:28:31.173" endtime="20210228 19:28:31.174"></status>
+</kw>
+<status status="FAIL" starttime="20210228 19:28:30.611" endtime="20210228 19:28:31.175" critical="yes">200 != 201</status>
+</test>
+<doc>API test for top news</doc>
+<status status="FAIL" starttime="20210228 19:28:30.235" endtime="20210228 19:28:31.178"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Topnews">Topnews</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
